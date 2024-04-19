@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jspstudy.bbs.dao.BoardDao;
 import com.jspstudy.bbs.vo.Board;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @WebServlet("/updateProcess")
 public class BoardUpdateController extends HttpServlet {

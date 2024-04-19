@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jspstudy.bbs.dao.BoardDao;
 import com.jspstudy.bbs.vo.Board;
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 @WebServlet("/writeProcess")
 public class BoardWriteController extends HttpServlet {
@@ -63,7 +65,7 @@ public class BoardWriteController extends HttpServlet {
 
 		sNo = multi.getParameter("sNo");
 		title = multi.getParameter("title");
-		writer = multi.getParameter("writer");
+		writer = multi.getParameter("writer");	
 		pass = multi.getParameter("pass");
 		content = multi.getParameter("content");
 		pageNum = multi.getParameter("pageNum");
