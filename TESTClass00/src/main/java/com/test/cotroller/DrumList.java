@@ -8,10 +8,30 @@ public class DrumList {
 	private String number;
 	private String brand;
 	private String memo;
+	private String file;
+	
+	// 2. public 매서드를 만들어주고 현재 매서드와 같은 이름으로 생성한다.
+		public DrumList() {
+			// 빈 공간으로 둔다.
+		}
 
-// 2. public 매서드를 만들어주고 현재 매서드와 같은 이름으로 생성한다.
-	public DrumList() {
-		// 빈 공간으로 둔다.
+	public DrumList(int no, String name, String sum, String number, String brand, String memo, String file) {
+		super();
+		this.no = no;
+		this.name = name;
+		this.sum = sum;
+		this.number = number;
+		this.brand = brand;
+		this.memo = memo;
+		this.file = file;
+	}
+
+	public String getFile() {
+		return file;
+	}
+
+	public void setFile(String file) {
+		this.file = file;
 	}
 
 	public int getNo() {
@@ -61,21 +81,7 @@ public class DrumList {
 	public void setMemo(String memo) {
 		this.memo = memo;
 	}
-
-	public DrumList(int no, String name, String sum, String number, String brand, String memo) {
-		super();
-		this.no = no;
-		this.name = name;
-		this.sum = sum;
-		this.number = number;
-		this.brand = brand;
-		this.memo = memo;
-	}
-
 //3-1 ( source - Generate getters and setters 들어가서 생성자를 생성해준다. )
 //3-2 ( source - Generate constructor using fields 들어가서 생성자를 생성해준다. )
 	// 4. end - 생성만 만들어주고 더이상 수정은 없는 java 폴더 입니다.
-
-	
-
 }

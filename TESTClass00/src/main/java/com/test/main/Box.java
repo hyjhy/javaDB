@@ -38,7 +38,7 @@ public class Box {
 	}
 
 	// 6.
-	public void insertDrum(Boxdrum box) {
+	public void insertDrum(DrumList board) {
 		String sqlInset = "insert into drum values\r\n"
 				+ "(no, name, sum, number, brand)";
 	

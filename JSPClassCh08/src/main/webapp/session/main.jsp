@@ -10,9 +10,9 @@
     <link href="../bootstrap/bootstrap.min.css" rel="stylesheet" >
   </head>
   <body>
-  	<div class="container">	
+  	<div class="container">
 		<!-- header -->
-		<%@ include file="../pages/header.jsp" %>
+		<%@ include file="../pages/header2.jsp" %>
   		<!-- content -->
   		<div class="row my-5 text-center" id="global-content">
   			<div class="col">
