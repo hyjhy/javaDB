@@ -8,6 +8,9 @@
 	align-items: center;
 	margin: 10px;
 }
+p{
+text-align: center;
+}
 
 .b{
 width: 250px;
@@ -34,29 +37,15 @@ margin: 20px;
 	<div class="b">
 		<p></p>
 	</div>
-	
-	
-	
-	
-	
-	
 	<div class="b">
 		<p>
-			<a href="boardList"><img src="../image/camerayour.jpg" id="camera"></a>
+			<a href="boardList"><img src="image/camerayour.jpg" id="camera"></a>
 		</p>
 	</div>
-
-
-	
-
-
-
-
-
 	<div class="b">
 		<c:if test="${sessionScope.isLogin }">
 			<span> <a class="" href="#"><img alt="user"
-					src="../image/user.jpg" id="user"> ${sessionScope.id } 님</a>
+					src="image/user.jpg" id="user"> ${sessionScope.id } 님</a>
 			</span>
 		</c:if>
 		<span class=""> <a class=""
@@ -69,8 +58,4 @@ margin: 20px;
 			</c:if>
 		</span>
 	</div>
-
-
-
 </div>
-<%-- end header --%>

@@ -34,7 +34,7 @@ public class BoardDetailController extends HttpServlet {
 
 		// BoardDao 객체 구하고 게시 글 번호(no)에 해당하는 게시 글을 읽어온다.
 		BoardDao dao = new BoardDao();
-		Board board = dao.getBoard(Integer.valueOf(no));
+		Board board = dao.getBoard(Integer.valueOf(no), true);
 
 		// 요청을 처리한 결과 데이터를 HttpServletRequest의 속성에 저장한다.
 		req.setAttribute("board", board);

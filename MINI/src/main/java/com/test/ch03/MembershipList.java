@@ -42,5 +42,6 @@ public class MembershipList extends HttpServlet {
 		BoardDao dao = new BoardDao(); // 게시글을 DB에 추가한다.
 		dao.insertMation(mation);
 
+		resp.sendRedirect("boardList");
 	}
 }

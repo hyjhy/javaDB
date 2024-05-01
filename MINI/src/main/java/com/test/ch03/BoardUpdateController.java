@@ -54,7 +54,7 @@ public class BoardUpdateController extends HttpServlet {
 			MultipartRequest multi = new MultipartRequest(req, realPath, maxFileSize, encoding,
 					new DefaultFileRenamePolicy());
 
-			sNo = multi.getParameter("sNo");
+			sNo = multi.getParameter("no");
 			title = multi.getParameter("title");
 			name = multi.getParameter("name");
 			pass = multi.getParameter("pass");
@@ -63,7 +63,7 @@ public class BoardUpdateController extends HttpServlet {
 			fileName = multi.getFilesystemName("file1");
 			System.out.println("업로드 된 파일명 : " + fileName);
 			System.out.println("원본 파일명 : " + multi.getOriginalFileName("file1"));
-
+			System.out.println(name);
 			if (fileName == null) {
 				System.out.println("파일이 업로드 되지 않았습니다.");
 			}
@@ -77,10 +77,11 @@ public class BoardUpdateController extends HttpServlet {
 			name = req.getParameter("name");
 			pageNum = req.getParameter("pageNum");
 		}
+		
 		// 정상적인 요청인지 체크
 		if (sNo == null || sNo.equals("") || pass == null || pass.equals("") || pageNum == null || pageNum.equals("")) {
 			resp.setContentType("text/html; charset=utf-8");
-			PrintWriter out = resp.getWriter();
+			PrintWriter out = resp.getWriter();	
 			out.print("<script>");
 			out.print("	alert('잘못된 접근입니다.');");
 			out.print("	history.back();");

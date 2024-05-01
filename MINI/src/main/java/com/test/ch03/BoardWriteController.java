@@ -51,18 +51,22 @@ public class BoardWriteController extends HttpServlet {
 		String name = multi.getParameter("name");
 		String pass = multi.getParameter("pass");
 		
-
-
 		Board board = new Board();
 		board.setTitle(title);
 		board.setName(name);
 		board.setPass(pass);
 		
-
+		String fileName = multi.getFilesystemName("file1");
+		System.out.println("업로드 된 파일명 : " + fileName);
+		System.out.println("원본 파일명 : " + multi.getOriginalFileName("file1"));
+		
+		board.setFile1(fileName);
+		if(board.getFile1() == null) {
+		System.out.println("파일이 업로드 되지 않았음");
+		}
+		
 		BoardDao dao = new BoardDao(); // 게시글을 DB에 추가한다.
 		dao.insertBoard(board);
-		
-		
 
 		resp.sendRedirect("boardList");
 	}

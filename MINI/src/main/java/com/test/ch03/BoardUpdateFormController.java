@@ -53,7 +53,7 @@ public class BoardUpdateFormController extends HttpServlet{
 		// 비밀번호가 맞으면 게시글 내용을 수정 폼에서 출력하기 위해서 BoardDao 객체를 이용해
 		// no 에 해당하는 게시들 정보를 읽어온다.
 		
-		Board board = dao.getBoard(no);
+		Board board = dao.getBoard(no, false);
 		// 요청을 처리한 결과 데이터를 HttpServletRequest 의 속성에 저장한다.
 		req.setAttribute("board", board);
 		req.setAttribute("pageNum", pageNum);

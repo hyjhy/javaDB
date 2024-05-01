@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- DB연결 해서 로그인 정보를 불러오는 공간 -->
-
+<c:set var="ADMIN_ID" value="admin" scope="application" />
+<c:set var="ADMIN_PASS" value="1234" scope="application" />
 <!-- 로그인 성공 -->
 <c:if
 	test="${param.id == applicationScope.ADMIN_ID && param.pass == applicationScope.ADMIN_PASS }">
